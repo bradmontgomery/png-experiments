@@ -34,6 +34,12 @@ Running any of these through [tinypng](https://tinypng.com/) gives a file size o
 
 ## Exploring
 
+Check out one of the image's in a HEX editor:
+
+- Open an image in vim
+- Run `:% ! xxd`
+- explore!
+
 Open the image with PIL, and find the length of the image data (in bytes).
 
     >>> from PIL import Image
