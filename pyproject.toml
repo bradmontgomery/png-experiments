@@ -2,7 +2,18 @@
 name = "png-experiments"
 version = "0.1.0"
 description = "Exploring PNG file size and image data with Python"
-requires-python = ">=3.9"
+requires-python = ">=3.12"
+license = "MIT"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
 dependencies = [
     "ipython",
     "pillow",
