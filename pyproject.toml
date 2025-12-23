@@ -1,0 +1,12 @@
+[project]
+name = "png-experiments"
+version = "0.1.0"
+description = "Exploring PNG file size and image data with Python"
+requires-python = ">=3.9"
+dependencies = [
+    "ipython",
+    "pillow",
+]
+
+[project.scripts]
+png-experiments = "main:main"

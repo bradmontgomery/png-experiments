@@ -23,11 +23,11 @@ here's the experiment:
 
 Resulting filesizes:
 
-- Pixelmator `img-pixelmator.png`: ~16KB
-- Photoshop (quick export as png) `img-photoshopcc2015.png`: ~10KB
-- Photoshop (save as, png "compressed") `img-photoshopcc2015-saveas.png` ~ 26K
-- Photoshop (legacy save for web, png-24) `img-photoshopcc2015-saveforweb-png-24.png` ~ 10K
-- Photoshop (legacy save for web, png-8) `img-photoshopcc2015-saveforweb-png-8.png` ~ 4.8K
+- Pixelmator `samples/img-pixelmator.png`: ~16KB
+- Photoshop (quick export as png) `samples/img-photoshopcc2015.png`: ~10KB
+- Photoshop (save as, png "compressed") `samples/img-photoshopcc2015-saveas.png` ~ 26K
+- Photoshop (legacy save for web, png-24) `samples/img-photoshopcc2015-saveforweb-png-24.png` ~ 10K
+- Photoshop (legacy save for web, png-8) `samples/img-photoshopcc2015-saveforweb-png-8.png` ~ 4.8K
 
 Running any of these through [tinypng](https://tinypng.com/) gives a file size of ~ 4K
 
@@ -64,7 +64,20 @@ You can also explicitly set a ZLIB compression level (0 = none, 9 = maximum)
     >>> new_image = img.copy()
     >>> new_image = image.save("newfile.png", compression_level=9)
 
-See the `main.py` file in this repo for (a litte bit) more.
+See the `src/main.py` file in this repo for (a litte bit) more.
+
+## Setup
+
+This project uses [uv](https://docs.astral.sh/uv/) for dependency management.
+
+```bash
+# Install dependencies
+uv sync
+
+# Run the script
+uv run python src/main.py info samples/img-pixelmator.png
+uv run python src/main.py copy samples/img-pixelmator.png
+```
 
 
 # Also really cool:
